@@ -65,6 +65,7 @@ function playAgain(){
         box.style.background = 'cadetblue'
         box.addEventListener('click', insertSymbol);
         playBtn.style.display = 'none'
+        counter = 0
     })
 }
 
