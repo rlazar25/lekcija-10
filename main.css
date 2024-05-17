@@ -21,4 +21,10 @@ body{
     height: 200px;
     border: 1px solid #eee;
     background: cadetblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    color: white;
+    font-family: sans-serif;
 }
