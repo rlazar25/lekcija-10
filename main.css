@@ -1,3 +1,8 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 body{
     display: flex;
     justify-content: center;
@@ -8,4 +13,12 @@ body{
     width: 600px;
     height: 600px;
     box-shadow: 0 0 8px #ddd;
+    display: flex;
+    flex-wrap: wrap;
+}
+.box{
+    width: 200px;
+    height: 200px;
+    border: 1px solid #eee;
+    background: cadetblue;
 }
