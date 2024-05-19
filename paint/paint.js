@@ -1,5 +1,4 @@
 window.addEventListener('mousemove', drawLine);
-window.addEventListener('click', makeCircle);
 let body = document.querySelector('body');
 
 let rangeInput = document.querySelector('input[type="range"]');
@@ -23,18 +22,6 @@ colorInput.addEventListener('input', function(e){
 colorInput2.addEventListener('input', function(e){
     color2 = this.value
 })
-
-function makeCircle(){
-        let circle = document.createElement('div');
-        circleLine.classList.add('circle');
-        circleLine.style.width = r + 'px'
-        circleLine.style.height = r + 'px'
-        circleLine.style.background = color
-        circleLine.style.top = (e.y - (r/2)) + 'px';
-        circleLine.style.left = (e.x  - (r/2)) + 'px';
-        body.appendChild(circle)
-
-}
 
 
 function drawLine(e){
