@@ -1,4 +1,5 @@
 window.addEventListener('mousemove', drawLine);
+window.addEventListener('click', makeCircle);
 let body = document.querySelector('body');
 
 let rangeInput = document.querySelector('input[type="range"]');
@@ -7,7 +8,7 @@ let colorInput2 = document.querySelector('input[type=color2]');
 let rangeLabel = document.querySelector('label[for="range"]')
 // let colorLabel
 
-let r = 2;
+let r = 10;
 let color = '#000000'
 let color2 = '#ff0000'
 
@@ -23,25 +24,37 @@ colorInput2.addEventListener('input', function(e){
     color2 = this.value
 })
 
+function makeCircle(){
+        let circle = document.createElement('div');
+        circleLine.classList.add('circle');
+        circleLine.style.width = r + 'px'
+        circleLine.style.height = r + 'px'
+        circleLine.style.background = color
+        circleLine.style.top = (e.y - (r/2)) + 'px';
+        circleLine.style.left = (e.x  - (r/2)) + 'px';
+        body.appendChild(circle)
+
+}
+
 
 function drawLine(e){
     if(e.altKey){
-        let circle = document.createElement('div');
-        circle.classList.add('circle');
-        circle.style.width = r + 'px'
-        circle.style.height = r + 'px'
-        circle.style.background = color
-        circle.style.top = (e.y - (r/2)) + 'px';
-        circle.style.left = (e.x  - (r/2)) + 'px';
-        body.appendChild(circle)
+        let circleLine = document.createElement('div');
+        circleLine.classList.add('circle');
+        circleLine.style.width = r + 'px'
+        circleLine.style.height = r + 'px'
+        circleLine.style.background = color
+        circleLine.style.top = (e.y - (r/2)) + 'px';
+        circleLine.style.left = (e.x  - (r/2)) + 'px';
+        body.appendChild(circleLine)
     } else if(e.ctrlKey){
-        let circle = document.createElement('div');
-        circle.classList.add('circle');
-        circle.style.width = r + 'px'
-        circle.style.height = r + 'px'
-        circle.style.background = color2
-        circle.style.top = (e.y - (r/2)) + 'px';
-        circle.style.left = (e.x  - (r/2)) + 'px';
-        body.appendChild(circle)
+        let circleLine = document.createElement('div');
+        circleLine.classList.add('circle');
+        circleLine.style.width = r + 'px'
+        circleLine.style.height = r + 'px'
+        circleLine.style.background = color2
+        circleLine.style.top = (e.y - (r/2)) + 'px';
+        circleLine.style.left = (e.x  - (r/2)) + 'px';
+        body.appendChild(circleLine)
     }
 }
